@@ -1,9 +1,10 @@
 #вывод даты в определённом формате
 
-from greetings import created_date, issue_date
+def date_changer_func (data):
+      return data[0:5]
 
-temp_issue_date = issue_date[0:5]
-temp_created_date = created_date[0:5]
+def print_test():
+      print(date_changer_func('19.01.2038'))
 
-print(f"Дата создания заметки: {temp_created_date}\n"
-      f"Дата истечения заметки: {temp_issue_date}")
+if __name__ == '__main__':
+    print_test()
