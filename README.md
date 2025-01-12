@@ -18,3 +18,6 @@
 - **check_deadline.py** Проверка дедлайна
 - **multiple_notes.py** Добавление нескольких заметок
 - **delete_note.py** Удаление заметок (для работы необходим data_file.json в той же директории)
+
+## Этап 3
+- **create_note_function.py** функция создания заметки 
