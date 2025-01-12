@@ -20,4 +20,5 @@
 - **delete_note.py** Удаление заметок (для работы необходим data_file.json в той же директории)
 
 ## Этап 3
-- **create_note_function.py** функция создания заметки 
+- **create_note_function.py** функция создания заметки
+- **update_note_function.py** функция обновления заметки 
