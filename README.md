@@ -21,4 +21,5 @@
 
 ## Этап 3
 - **create_note_function.py** функция создания заметки
-- **update_note_function.py** функция обновления заметки 
+- **update_note_function.py** функция обновления заметки (для работы необходим data_file.json в той же директории)
+- **display_notes(notes).py функция отображения заметок (для работы необходим data_file.json в той же директории)
