@@ -39,11 +39,11 @@ while True:
     elif (yes_no == 'н') or (yes_no == 'не') or (yes_no == 'нет'):                              # если нет остановка цикла
         break
 
-count = 1
-
-for note_el in note_list:                                                                        # Вывод заметки
-    print(f'\nЗаметка {count}')
-    for i in note_el:
-        print(f'{i}: {note_el[i]}')
-    count = count + 1
+if __name__ == '__main__':
+    count = 1
+    for note_el in note_list:                                                                        # Вывод заметки
+        print(f'\nЗаметка {count}')
+        for i in note_el:
+            print(f'{i}: {note_el[i]}')
+        count = count + 1
 
