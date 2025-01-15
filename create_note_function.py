@@ -30,16 +30,18 @@ def created_note ():                                                            
 
     return note
 
-note_list = []
 
-while True:
-    yes_no = input('\nСоздать новую заметку? (да/нет):')                                        # функционал да/нет
-    if (yes_no == 'д') or (yes_no == 'да'):                                                     # если да повтор ввода
-        note_list.append(created_note())
-    elif (yes_no == 'н') or (yes_no == 'не') or (yes_no == 'нет'):                              # если нет остановка цикла
-        break
 
 if __name__ == '__main__':
+    note_list = []
+
+    while True:
+        yes_no = input('\nСоздать новую заметку? (да/нет):')  # функционал да/нет
+        if (yes_no == 'д') or (yes_no == 'да'):  # если да повтор ввода
+            note_list.append(created_note())
+        elif (yes_no == 'н') or (yes_no == 'не') or (yes_no == 'нет'):  # если нет остановка цикла
+            break
+
     count = 1
     for note_el in note_list:                                                                        # Вывод заметки
         print(f'\nЗаметка {count}')

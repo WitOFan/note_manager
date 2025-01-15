@@ -1,8 +1,5 @@
 import json
 
-with open("data_file.json", 'r') as json_file:                                                                  # Чтение заметок из json
-    note_list = json.load(json_file)
-
 def print_notes (list_):
     count = 1
     if len(list_) == 0:                                                                                     # Проверка на пустой список
@@ -17,4 +14,6 @@ def print_notes (list_):
             count = count + 1
 
 if __name__ == '__main__':
+    with open("data_file.json", 'r') as json_file:  # Чтение заметок из json
+        note_list = json.load(json_file)
     print_notes(note_list)
