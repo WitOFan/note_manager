@@ -8,8 +8,8 @@ def print_notes (list_):
         print('Список заметок:')
         for note_el in list_:                                                                               # Вывод заметок
             print(f'\nЗаметка {count}')
-            for j in note_el:
-                print(f'{j}: {note_el[j]}')
+            for field in note_el:
+                print(f'{field}: {note_el[field]}')
             print('------------------------------------')
             count = count + 1
 

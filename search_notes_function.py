@@ -11,8 +11,8 @@ def search_core(notes, keyword=None, status=None):
                         search_list.append(note_el)
                         break
         elif type(keyword) == str:                                                                                  # Поиск по ключевому слову
-            for i in note_el:
-                if keyword.lower() in note_el[i].lower():
+            for field in note_el:
+                if keyword.lower() in note_el[field].lower():
                     search_list.append(note_el)
                     break
         elif type(status) == str:                                                                                   # Поиск по статусу
@@ -26,12 +26,12 @@ def search_core(notes, keyword=None, status=None):
         print('Найденные заметки:')
         for search_el in search_list:  # Вывод заметок
             print(f'\nЗаметка {count}')
-            for j in search_el:
-                print(f'{j}: {search_el[j]}')
+            for field in search_el:
+                print(f'{field}: {search_el[field]}')
             print('------------------------------------')
             count = count + 1
 
-def search_note (list_):
+def search_note (notes):
     while True:
         print('Выбирете способ посика:\n'
               '1. Поиск по ключевому слову\n'
@@ -40,14 +40,14 @@ def search_note (list_):
         user_choice = input('Введите число: ')
         if user_choice == '1':                                                                                          # Поиск по ключевому слову
             user_keyword = input('Введите ключевое слово для поиска: ')
-            search_core(list_, user_keyword.strip())
+            search_core(notes, user_keyword.strip())
         elif user_choice == '2':                                                                                        # Поиск по статусу
             user_status = input('Введите статус заметки для поиска: ')
-            search_core(list_, status=user_status.strip())
+            search_core(notes, status=user_status.strip())
         elif user_choice == '3':                                                                                        # Поиск по ключевому слову и статусу
             user_keyword = input('Введите ключевое слово для поиска: ')
             user_status = input('Введите статус заметки для поиска: ')
-            search_core(list_, user_keyword.strip(), user_status.strip())
+            search_core(notes, user_keyword.strip(), user_status.strip())
         else:                                                                                                           # Некорректный ввод
             print('Пожалуйста, введите число, обозначающее вариант поиска (1, 2, 3)')
             continue

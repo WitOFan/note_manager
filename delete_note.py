@@ -9,11 +9,11 @@ def del_note (list_):
             if (note_el["Имя"].lower() == del_index.lower()) or (note_el["Заголовок"].lower() == del_index.lower()):        # Поиск совпадений по имени или заголовка, игнорируя регистр
                 del_index_list.append(list_.index(note_el))                                                             # Добавления индекса найденной заметки в список
                 search_ok = True
-                for i in del_index_list:
-                    yes_no = input(f'Вы действительно хотите удалить заметку {i+1}? (да/нет): ')
+                for field in del_index_list:
+                    yes_no = input(f'Вы действительно хотите удалить заметку {field+1}? (да/нет): ')
                     if (yes_no == 'д') or (yes_no == 'да'):
-                        del list_[i]                                                                                    # Удаление заметок по индексу
-                        print(f'Заметка {i+1} успешно удалена')
+                        del list_[field]                                                                                    # Удаление заметок по индексу
+                        print(f'Заметка {field+1} успешно удалена')
                     elif (yes_no == 'н') or (yes_no == 'не') or (yes_no == 'нет'):
                         continue
         if search_ok:
