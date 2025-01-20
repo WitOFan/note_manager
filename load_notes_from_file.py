@@ -18,4 +18,4 @@ def load_notes_from_file(filename):
 if __name__ == '__main__':
     notes = load_notes_from_file('data_file')
 
-    #print_notes(notes)
+    print_notes(notes)
