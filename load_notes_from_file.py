@@ -9,9 +9,13 @@ def load_notes_from_file(filename):
             note_list = json.load(json_file)
         return note_list
     except FileNotFoundError:
-        print('Такой файл не найден')
+        print('Такой файл не найден и был создан новый')
+        with open(f"{filename}.json", 'w') as write_file:
+            json.dump("", write_file, ensure_ascii=False)
+    except json.JSONDecodeError as err:
+        print(f"Ошибка декодирования JSON: {err}")
 
 if __name__ == '__main__':
     notes = load_notes_from_file('data_file')
 
-    print_notes(notes)
+    #print_notes(notes)
