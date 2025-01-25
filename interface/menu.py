@@ -1,11 +1,11 @@
 from create_note_function import created_note
 from display_notes import print_notes
-from update_note_function import update_notes
-from delete_note import del_note
-from search_notes_function import search_note
+from utils.update_note_function import update_notes
+from utils.delete_note import del_note
+from utils.search_notes_function import search_note
 import json
 
-with open("data_file.json", 'r') as json_file:                                                                      # Чтение заметок из json
+with open("../data/data_file.json", 'r') as json_file:                                                                      # Чтение заметок из json
     note_list = json.load(json_file)
 
 while True:

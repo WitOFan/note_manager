@@ -1,4 +1,4 @@
 .idea
 .venv
-Notes.json
-Notes.txt
+test/Notes.json
+test/Notes.txt

@@ -58,7 +58,7 @@ def search_note (notes):
             break
 
 if __name__ == '__main__':
-    with open("data_file.json", 'r') as json_file:  # Чтение заметок из json
+    with open("../data/data_file.json", 'r') as json_file:  # Чтение заметок из json
         note_list = json.load(json_file)
 
     search_note(note_list)

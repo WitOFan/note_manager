@@ -1,6 +1,6 @@
 import json
 
-from display_notes import print_notes
+from interface.display_notes import print_notes
 
 
 def load_notes_from_file(filename):
