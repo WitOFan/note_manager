@@ -2,7 +2,6 @@ import json
 
 from interface.display_notes import print_notes
 
-
 def load_notes_from_file(filename):
     try:
         with open(f"{filename}.json", 'r') as json_file:  # Чтение заметок из json

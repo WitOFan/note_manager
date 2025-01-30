@@ -1,6 +1,6 @@
 #Добавление нескольких заголовков
 
-from add_input import *
+from add_input import username, content, status, created_date, issue_date
 from utils.date_changer import date_changer_func
 
 def add_title_list():
